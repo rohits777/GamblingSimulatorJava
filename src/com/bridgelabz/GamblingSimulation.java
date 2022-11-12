@@ -4,20 +4,20 @@ package com.bridgelabz;
 public class GamblingSimulation {
     public static final int STAKE = 100;
     public static final int BET = 1;
-    static int stake=100;
+    public static int stake=100;
 
 
     //check win or lose
     public void winOrLose() {
-        int value=(int)(Math.random()*2);
+
 
         while(stake > 50 && stake < 150){
-
+            int value=(int)(Math.random()*2);
             if (value==1) {
-                stake++;
+                stake= stake + BET;
                 System.out.println("player Win stake is:" + stake);
             }else{
-                stake--;
+                stake= stake - BET;
                     System.out.println("player Lose stake is:" +stake);}
 
             }
